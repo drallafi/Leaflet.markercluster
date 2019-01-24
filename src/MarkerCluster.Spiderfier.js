@@ -446,7 +446,7 @@ L.MarkerClusterGroup.include({
 	},
 
 	_unspiderfy: function (zoomDetails) {
-		if (this._spiderfied) {
+		if (this._spiderfied && !L.MarkerClusterGroup.prototype.options.disableUnspiderfy) {
 			this._spiderfied.unspiderfy(zoomDetails);
 		}
 	},
